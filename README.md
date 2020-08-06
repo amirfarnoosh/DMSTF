@@ -46,32 +46,26 @@ Run the following snippets to restore results from pre-trained checkpoints for t
 Here, data files for Hangzhou, Birmingham, Guangzhou are included due to storage limitations.
 
 
-For Birmingham:
-
+### Birmingham: 
 `python dmfa_traffic.py -t 18 -k 10 -file ./data_traffic/tensor_b.mat -smod ./ckpt_traffic/b/ -dpath ./Birmingham_results/ -restore -ID birmingham -days 7`
 
-For Hangzhou:
-
+### Hangzhou: 
 `python dmfa_traffic.py -t 108 -k 10 -file ./data_traffic/tensor_h.mat -smod ./ckpt_traffic/h/ -dpath ./Hangzhou_results/ -restore -ID hangzhou -days 5`
 
-For Seattle:
-
+### Seattle: 
 `dmfa_traffic.py -t 288 -k 30 -file ./data_traffic/tensor_s.txt -smod ./ckpt_traffic/s/ -dpath ./Seattle_results/ -restore -ID seattle -days 5`
 
-For Guangzhou:
-
+### Guangzhou:
 `python dmfa_traffic.py -t 144 -k 30 -file ./data_traffic/tensor_g.mat -smod ./ckpt_traffic/g/ -dpath ./Guangzhou_results/ -restore -ID guangzhou -days 5`
 
 or run the following snippets for training, and then predicting (e.g., Hangzhou, Birmingham datasets):
 
-For Hangzhou:
-
+### Hangzhou:
 `python dmfa_traffic.py -t 108 -k 10 -epoch 500 -bs 25 -file ./data_traffic/tensor_h.mat -smod ./Hangzhou_results/ -dpath ./Hangzhou_results/ -days 5`
 
 `python dmfa_traffic.py -t 108 -k 10 -epoch 500 -bs 25 -file ./data_traffic/tensor_b.mat -smod ./Hangzhou_results/ -dpath ./Hangzhou_results/ -days 5 -predict`
 
-For Birmingham:
-
+### Birmingham:
 `python dmfa_traffic.py -t 18 -k 10 -epoch 5000 -bs 30 -file ./data_traffic/tensor_b.mat -smod ./Birmingham_results/ -dpath ./Birmingham_results/ -days 7`
 
 `python dmfa_traffic.py -t 18 -k 10 -epoch 5000 -bs 30 -file ./data_traffic/tensor_b.mat -smod ./Birmingham_results/ -dpath ./Birmingham_results/ -days 7 -predict`
